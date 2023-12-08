@@ -244,6 +244,7 @@ button:hover {
 	align-text:center;
 	justify-content:center;
 	align-items:center;
+	  overflow:none;
 }
 }
 
