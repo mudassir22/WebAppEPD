@@ -77,7 +77,7 @@ function sendRequest() {
 }
 */
 
-
+/*
 
      const jsonData = {
           "states": [
@@ -154,3 +154,66 @@ function sendRequest() {
     // Event listeners to update options based on user selections
     document.getElementById('stateName').addEventListener('change', updateZoneOptions);
     document.getElementById('zoneName').addEventListener('change', updateDisplayNumberOptions);
+
+
+
+*/
+
+ fetch('example.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    // Function to update dropdown options
+    function updateDropdown(elementId, options) {
+      const dropdown = document.getElementById(elementId);
+      dropdown.innerHTML = '';
+
+      options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.textContent = option;
+        dropdown.appendChild(optionElement);
+      });
+    }
+
+    // Function to update state options
+    function updateStateOptions() {
+      const states = jsonData.states;
+      updateDropdown('stateName', states.map(state => state.name));
+
+      // Trigger initial update for zones based on the default state
+      updateZoneOptions();
+    }
+
+    // Function to update zone options
+    function updateZoneOptions() {
+      const selectedState = document.getElementById('stateName').value;
+      const selectedStateObject = jsonData.states.find(state => state.name === selectedState);
+
+      if (selectedStateObject) {
+        updateDropdown('zoneName', selectedStateObject.zones.map(zone => zone.name));
+        updateDisplayNumberOptions(); // Update display numbers based on the default zone
+      }
+    }
+
+    // Function to update display number options
+    function updateDisplayNumberOptions() {
+      const selectedState = document.getElementById('stateName').value;
+      const selectedZone = document.getElementById('zoneName').value;
+
+      const selectedStateObject = jsonData.states.find(state => state.name === selectedState);
+      const selectedZoneObject = selectedStateObject.zones.find(zone => zone.name === selectedZone);
+
+      if (selectedZoneObject) {
+        updateDropdown('displayNumber', selectedZoneObject.displayNumbers);
+      }
+    }
+
+    // Initial updates
+    updateStateOptions();
+
+    // Event listeners to update options based on user selections
+    document.getElementById('stateName').addEventListener('change', updateZoneOptions);
+    document.getElementById('zoneName').addEventListener('change', updateDisplayNumberOptions);
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
+
