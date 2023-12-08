@@ -3,27 +3,22 @@
     {
       "name": "Delhi",
       "zones": [
-        {
-          "name": "Zone A",
-          "displayNumbers": ["1", "2", "3"]
-        },
-        {
-          "name": "Zone B",
-          "displayNumbers": ["4", "5", "6"]
-        }
+        { "name": "Zone A", "displayNumbers": ["1A", "2A", "3A", "4A", "AllA"] },
+        { "name": "Zone B", "displayNumbers": ["1B", "2B", "3B", "4B", "AllB"] }
       ]
     },
     {
       "name": "Mumbai",
       "zones": [
-        {
-          "name": "Zone X",
-          "displayNumbers": ["7", "8", "9"]
-        },
-        {
-          "name": "Zone Y",
-          "displayNumbers": ["10", "11", "12"]
-        }
+        { "name": "Zone X", "displayNumbers": ["1X", "2X", "3X", "4X", "AllX"] },
+        { "name": "Zone Y", "displayNumbers": ["1Y", "2Y", "3Y", "4Y", "AllY"] }
+      ]
+    },
+    {
+      "name": "Chennai",
+      "zones": [
+        { "name": "Zone M", "displayNumbers": ["1M", "2M", "3M", "4M", "AllM"] },
+        { "name": "Zone N", "displayNumbers": ["1N", "2N", "3N", "4N", "AllN"] }
       ]
     }
   ]
