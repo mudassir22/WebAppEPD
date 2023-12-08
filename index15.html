@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPD Sender</title>
+  <link rel="stylesheet" href="styles15.css">
+</head>
+<body>
+  <div class = "main_container">
+      <div id="toggleButtons">
+        <button class="toggle-button active"  onclick="toggleContent('text')">Text</button>
+        <button class="toggle-button" onclick="toggleContent('image')">Image</button>
+      </div>
+      <div id="contentContainer">
+        <div id="container">
+          <h2>Send To EPD</h2>
+          <div class="form-group">
+            <label for="stationName">Select State:</label>
+            <select id="stateName">
+                <!--Dynamic dropdown coming here ....-->                
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="stationName">Select Zone:</label>
+            <select id="zoneName">
+                <!--Dynamic dropdown coming here ....-->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="displayNumber">Select Display Number:</label>
+            <select id="displayNumber">
+                <!--Dynamic dropdown coming here ....-->
+            </select>
+          </div>
+          <div id="textContent">
+            <!-- Text content here -->
+            <textarea id="textInput" name="data" placeholder="Enter text here..."></textarea>
+          </div>
+          <div id="imageContent" style="display: none;">
+            <!-- Image content here -->
+            <label for="fileInput">Select Image:</label>
+            <div class="file-input-container">
+                <input type="file" id="fileInput" name="file" accept="image/*" onchange="displayClearButton()">
+                <label for="fileInput" class="clear-button" style="display: none;">Clear</label>
+            </div>
+            </div>
+          <button class="submit-btn" onclick="sendRequest()">Send</button>
+        </div>
+      </div>
+  </div>
+  <script src="script15.js"></script>
+</body>
+</html>

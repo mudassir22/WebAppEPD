@@ -1,0 +1,249 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://cdn.wallpapersafari.com/22/70/oZCrvS.jpeg') center/cover no-repeat; /* Replace the image URL */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #ffffff;
+  backdrop-filter: blur(30px); /* Adjust the blur value as needed */
+}
+
+
+
+#toggleButtons {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-left:50px;
+  gap:15px;
+  margin-bottom: 20px;
+}
+
+
+#textInput{
+	padding:5px;
+	width:300px;
+	height:80px;
+	margin-bottom:25px;
+
+}
+
+.form-group select {
+  padding: 11px; /* Adjust the padding based on your design preferences */
+  font-size: 18px; /* Adjust the font size based on your design preferences */
+}
+
+#textContent textarea::placeholder {
+  font-size: 16px; /* Adjust the font size based on your design preferences */
+  /* Additional styling properties if needed */
+}
+
+textarea {
+  font-size: 16px; /* Adjust the font size based on your design preferences */
+}
+
+.toggle-button {
+  background-color:#535253;
+  width:200px;
+  height:50px;
+  font-size:18px;
+  font-weight:bold;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #4282EA;
+  color: #ffffff;
+}
+
+.toggle-button.active:hover {
+  background-color: #2C6DD7;
+  color: #ffffff;
+}
+
+#contentContainer {
+
+  text-align: center;
+  padding:30px;
+}
+
+#container {
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 90px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin: auto;
+}
+
+.clear-button{
+	color:#fff;
+	background-color:red;
+	border:none;
+	border-radius:5px;
+	width:80px;
+	height:20px;
+
+}
+
+h2 {
+  color: #333333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding:1px;
+}
+
+label {
+  color:black;
+  display: flex;
+  margin-bottom: 5px;
+  font-size:16px;
+}
+
+.file-input-container {
+  font-size: 16px; /* Adjust the font size based on your design preferences */
+  /* Additional styling properties if needed */
+}
+
+select, textarea, input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px dotted #ddd;
+  border-radius: 5px;
+}
+
+/* Common styling for elements with specific IDs */
+#stateName,
+#zoneName,
+#displayNumber {
+  /* Your styles here */
+  color: #333;
+  font-size: 16px;
+  width:300px;
+
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  /* Add more styles as needed */
+}
+
+
+
+
+
+
+
+/* Keep your existing styles for .file-input-container and .clear-button */
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#fileInput {
+  width: 300px;
+  padding: 10px; /* Adjust padding based on your design */
+  border: 1px solid #ddd; /* Add a border for better visibility */
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#fileInput:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.clear-button {
+  background-color: #C61919;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  margin-top: 1px; /* Adjust the margin based on your design */
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #7C0101;
+}
+
+
+button {
+  background-color:#4282EA;
+  color: #ffffff;
+  padding: 15px;
+  border: none;
+  margin-top:10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#textContent{
+	margin-bottom:-5px;
+}
+
+#imageContent{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:20px;
+}
+
+.main_container{
+	display:flex;
+	flex-direction:row;
+	align-text:center;
+	justify-content:center;
+	align-items:center;
+}
+
+button:hover {
+  background-color: #2C6DD7;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main_container{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+  }
+  #toggleButtons{
+	  margin-left:0px;
+  }
+  .main_container{
+	display:flex;
+	flex-direction:column;
+	align-text:center;
+	justify-content:center;
+	align-items:center;
+}
+}
+

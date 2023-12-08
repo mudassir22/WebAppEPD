@@ -1,0 +1,119 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://cdn.wallpapersafari.com/22/70/oZCrvS.jpeg') center/cover no-repeat; /* Replace the image URL */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #ffffff;
+  backdrop-filter: blur(30px); /* Adjust the blur value as needed */
+}
+
+.main-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.foot{
+    text-align:center;
+    margin:130px 0px -170px 30px;
+}
+
+.main_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  padding-bottom: -10px;
+  width: 300px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #2c3e50;
+  margin: 13px 0;
+}
+
+.login-input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #4282EA;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.epd_text h1, h3 {
+  color: #fff;
+  margin-right: 130px;
+  margin-bottom: 40px;
+}
+
+.epd_text h3 {
+    font-size:23px;
+}
+
+.epd_text h1 {
+  color: #4282EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: -15px;
+}
+
+.login-button:hover {
+  background-color: #2C6DD7;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .main_page {
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .login-box {
+    width: 80%;
+  }
+
+  .epd_text h1 {
+    margin-right: 0;
+    text-align: center;
+
+  }
+  .epd_text h1,h3{
+    margin-right: 0;
+    display:flex;
+    flex-direction:column;
+  }
+
+}

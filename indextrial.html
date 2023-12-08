@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Stylish Login</title>
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color :#EFF2F5;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main_page{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      padding-bottom:-5px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #2c3e50;
+      margin:13px 0;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .login-button {
+      background-color: #4282EA;
+      font-size:18px;
+      font-weight:bold;
+      color: #ffffff;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .epd_text h1,h3{
+       color:#2c3e50;
+       margin-right:130px;
+       margin-bottom:40px;
+    }
+    .epd_text h1{
+       color:#4282EA;
+       display:flex;
+       align-items:center;
+       justify-content:center;
+       font-weight:bold;
+       font-size:45px;
+       margin-bottom:-15px;
+    }
+    .login-button:hover {
+      background-color: #2C6DD7;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+    <div class="main_page">
+        <div class="epd_text">
+            <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">EPD</h1>
+            <h3>send the <span style="color:#2c3e50">data</span> to the <span style="font-weight:bold; color:#4282EA; font-size:23px;">E-Paper</span> Display</h3>
+        </div>
+        <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <input class="login-input" type="text" placeholder="Username" required>
+          <input class="login-input" type="password" placeholder="Password" required>
+          <button class="login-button" type="submit">Login</button>
+        </form>
+  </div>
+    
+    </div>
+</body>
+</html>
