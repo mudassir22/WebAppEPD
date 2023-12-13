@@ -1,24 +1,71 @@
 {
   "states": [
     {
-      "name": "Delhi",
+      "value": "delhi",
+      "label": "Delhi",
       "zones": [
-        { "name": "Zone A", "displayNumbers": ["1A", "2A", "3A", "4A", "AllA"] },
-        { "name": "Zone B", "displayNumbers": ["1B", "2B", "3B", "4B", "AllB"] }
+        {"value": "zoneA", "label": "Zone A"},
+        {"value": "zoneB", "label": "Zone B"}
       ]
     },
     {
-      "name": "Mumbai",
+      "value": "mumbai",
+      "label": "Mumbai",
       "zones": [
-        { "name": "Zone X", "displayNumbers": ["1X", "2X", "3X", "4X", "AllX"] },
-        { "name": "Zone Y", "displayNumbers": ["1Y", "2Y", "3Y", "4Y", "AllY"] }
+        {"value": "zoneM", "label": "Zone M"},
+        {"value": "zoneN", "label": "Zone N"}
       ]
     },
     {
-      "name": "Chennai",
+      "value": "chennai",
+      "label": "Chennai",
       "zones": [
-        { "name": "Zone M", "displayNumbers": ["1M", "2M", "3M", "4M", "AllM"] },
-        { "name": "Zone N", "displayNumbers": ["1N", "2N", "3N", "4N", "AllN"] }
+        {"value": "zoneC", "label": "Zone C"},
+        {"value": "zoneD", "label": "Zone D"}
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "value": "zoneA",
+      "numbers": [
+        {"value": "1", "label": "Number 1"},
+        {"value": "2", "label": "Number 2"}
+      ]
+    },
+    {
+      "value": "zoneB",
+      "numbers": [
+        {"value": "3", "label": "Number 3"},
+        {"value": "4", "label": "Number 4"}
+      ]
+    },
+    {
+      "value": "zoneM",
+      "numbers": [
+        {"value": "5", "label": "Number 5"},
+        {"value": "6", "label": "Number 6"}
+      ]
+    },
+    {
+      "value": "zoneN",
+      "numbers": [
+        {"value": "7", "label": "Number 7"},
+        {"value": "8", "label": "Number 8"}
+      ]
+    },
+    {
+      "value": "zoneC",
+      "numbers": [
+        {"value": "9", "label": "Number 9"},
+        {"value": "10", "label": "Number 10"}
+      ]
+    },
+    {
+      "value": "zoneD",
+      "numbers": [
+        {"value": "11", "label": "Number 11"},
+        {"value": "12", "label": "Number 12"}
       ]
     }
   ]
