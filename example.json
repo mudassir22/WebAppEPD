@@ -2,7 +2,7 @@
   "states": [
     {
       "value": "california",
-      "label": "Delhi",
+      "label": "california",
       "zones": [
         {"value": "zoneA", "label": "Zone A"},
         {"value": "zoneB", "label": "Zone B"}
