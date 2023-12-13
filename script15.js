@@ -27,6 +27,7 @@ function displayClearButton() {
   clearButton.style.display = fileName ? 'block' : 'none';
 }
 
+
 function sendRequest() {
   const textInput = document.getElementById("textInput");
   const fileInput = document.getElementById("fileInput");
@@ -37,26 +38,16 @@ function sendRequest() {
   const displayNumber = document.getElementById("displayNumber").value;
 
   // Check if required values are selected
-  if (!state) {
+  if (!state || !zone || !displayNumber) {
     alert("Please select State, Zone, and Display Number before sending data.");
     return;
   }
 
-  if (!zone) {
-    alert("Please select Zone and Display Number before sending data.");
-    return;
-  }
-
-  if (!displayNumber) {
-    alert("Please select Display Number before sending data.");
-    return;
-  }
-  
   // Update the URL dynamically
   const baseUrl = "https://ad8d-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
 
-  if (textInput.style.display === 'block') {
+  if (textContent.style.display = 'block') {
     // Send text data
     fetch(baseUrl + dynamicUrl, {
       method: 'POST',
@@ -80,27 +71,26 @@ function sendRequest() {
 }
 
 async function sendImage(fileInput, url) {
-    const formData = new FormData();
-    formData.append("file", fileInput.files[0]);
+  const formData = new FormData();
+  formData.append("file", fileInput.files[0]);
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: formData,
-            timeout: 300000, // Set timeout to 5 minutes (300,000 milliseconds)
-        });
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      body: formData,
+    });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const responseData = await response.text();
-        alert("Server response: " + responseData);
-        fileInput.value = null;
-        displayClearButton();
-    } catch (error) {
-        alert("Error: " + error.message);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
+
+    const responseData = await response.text();
+    alert("Server response: " + responseData);
+    fileInput.value = null;
+    displayClearButton();
+  } catch (error) {
+    alert("Error: " + error.message);
+  }
 }
 
 
