@@ -1,71 +1,113 @@
 {
   "states": [
     {
-      "value": "california",
-      "label": "california",
+      "value": "delhi",
+      "label": "Delhi",
       "zones": [
-        {"value": "zoneA", "label": "Zone A"},
-        {"value": "zoneB", "label": "Zone B"}
+        {
+          "value": "zoneA",
+          "label": "Zone A",
+          "numbers": [
+            {"value": "1", "label": "Number 1"},
+            {"value": "2", "label": "Number 2"}
+          ]
+        },
+        {
+          "value": "zoneB",
+          "label": "Zone B",
+          "numbers": [
+            {"value": "3", "label": "Number 3"},
+            {"value": "4", "label": "Number 4"}
+          ]
+        }
       ]
     },
     {
       "value": "mumbai",
       "label": "Mumbai",
       "zones": [
-        {"value": "zoneM", "label": "Zone M"},
-        {"value": "zoneN", "label": "Zone N"}
+        {
+          "value": "zoneM",
+          "label": "Zone M",
+          "numbers": [
+            {"value": "5", "label": "Number 5"},
+            {"value": "6", "label": "Number 6"}
+          ]
+        },
+        {
+          "value": "zoneN",
+          "label": "Zone N",
+          "numbers": [
+            {"value": "7", "label": "Number 7"},
+            {"value": "8", "label": "Number 8"}
+          ]
+        }
       ]
     },
     {
       "value": "chennai",
       "label": "Chennai",
       "zones": [
-        {"value": "zoneC", "label": "Zone C"},
-        {"value": "zoneD", "label": "Zone D"}
-      ]
-    }
-  ],
-  "zones": [
-    {
-      "value": "zoneA",
-      "numbers": [
-        {"value": "1", "label": "Number 1"},
-        {"value": "2", "label": "Number 2"}
-      ]
-    },
-    {
-      "value": "zoneB",
-      "numbers": [
-        {"value": "3", "label": "Number 3"},
-        {"value": "4", "label": "Number 4"}
+        {
+          "value": "zoneC",
+          "label": "Zone C",
+          "numbers": [
+            {"value": "9", "label": "Number 9"},
+            {"value": "10", "label": "Number 10"}
+          ]
+        },
+        {
+          "value": "zoneD",
+          "label": "Zone D",
+          "numbers": [
+            {"value": "11", "label": "Number 11"},
+            {"value": "12", "label": "Number 12"}
+          ]
+        }
       ]
     },
     {
-      "value": "zoneM",
-      "numbers": [
-        {"value": "5", "label": "Number 5"},
-        {"value": "6", "label": "Number 6"}
+      "value": "kolkata",
+      "label": "Kolkata",
+      "zones": [
+        {
+          "value": "zoneK",
+          "label": "Zone K",
+          "numbers": [
+            {"value": "13", "label": "Number 13"},
+            {"value": "14", "label": "Number 14"}
+          ]
+        },
+        {
+          "value": "zoneL",
+          "label": "Zone L",
+          "numbers": [
+            {"value": "15", "label": "Number 15"},
+            {"value": "16", "label": "Number 16"}
+          ]
+        }
       ]
     },
     {
-      "value": "zoneN",
-      "numbers": [
-        {"value": "7", "label": "Number 7"},
-        {"value": "8", "label": "Number 8"}
-      ]
-    },
-    {
-      "value": "zoneC",
-      "numbers": [
-        {"value": "9", "label": "Number 9"},
-        {"value": "10", "label": "Number 10"}
-      ]
-    },
-    {
-      "value": "zoneD",
-      "numbers": [
-        {"value": "11", "label": "Number 11"},
-        {"value": "12", "label": "Number 12"}
+      "value": "bangalore",
+      "label": "Bangalore",
+      "zones": [
+        {
+          "value": "zoneB1",
+          "label": "Zone B1",
+          "numbers": [
+            {"value": "17", "label": "Number 17"},
+            {"value": "18", "label": "Number 18"}
+          ]
+        },
+        {
+          "value": "zoneB2",
+          "label": "Zone B2",
+          "numbers": [
+            {"value": "19", "label": "Number 19"},
+            {"value": "20", "label": "Number 20"}
+          ]
+        }
       ]
     }
   ]
