@@ -19,11 +19,6 @@ function toggleContent(option) {
   document.getElementById('contentContainer').style.display = 'block';
 }
 
-const imageButton = document.querySelector('.toggle-button:nth-child(2)');
-imageButton.classList.remove('active');
-
-
-
 function displayClearButton() {
   const fileInput = document.getElementById('fileInput');
   const clearButton = document.querySelector('.clear-button');
@@ -42,11 +37,21 @@ function sendRequest() {
   const displayNumber = document.getElementById("displayNumber").value;
 
   // Check if required values are selected
-  if (!state || !zone || !displayNumber) {
+  if (!state) {
     alert("Please select State, Zone, and Display Number before sending data.");
     return;
   }
 
+  if (!zone) {
+    alert("Please select Zone and Display Number before sending data.");
+    return;
+  }
+
+  if (!displayNumber) {
+    alert("Please select Display Number before sending data.");
+    return;
+  }
+  
   // Update the URL dynamically
   const baseUrl = "https://ad8d-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
