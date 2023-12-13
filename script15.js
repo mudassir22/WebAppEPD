@@ -1,4 +1,3 @@
-// script.js
 function toggleContent(option) {
   const textContent = document.getElementById('textContent');
   const imageContent = document.getElementById('imageContent');
@@ -19,6 +18,9 @@ function toggleContent(option) {
 
   document.getElementById('contentContainer').style.display = 'block';
 }
+
+const imageButton = document.querySelector('.toggle-button:nth-child(2)');
+imageButton.classList.remove('active');
 
 
 
