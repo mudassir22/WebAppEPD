@@ -33,8 +33,45 @@ function displayClearButton() {
 }
 
 function sendRequest() {
-  // Implement your logic to send data to the server
-  alert('Data sent successfully!');
+  const textInput = document.getElementById("textInput");
+  const fileInput = document.getElementById("fileInput");
+
+  // Get selected values from the form
+  const state = document.getElementById("stateName").value;
+  const zone = document.getElementById("zoneName").value;
+  const displayNumber = document.getElementById("displayNumber").value;
+
+  // Check if required values are selected
+  if (!state || !zone || !displayNumber) {
+    alert("Please select State, Zone, and Display Number before sending data.");
+    return;
+  }
+
+  // Update the URL dynamically
+  const baseUrl = "https://ad8d-122-160-48-182.ngrok-free.app";
+  const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
+
+  if (textInput.style.display === 'block') {
+    // Send text data
+    fetch(baseUrl + dynamicUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: textInput.value }),
+    })
+      .then(response => response.text())
+      .then(responseData => {
+        alert("Server response: " + responseData);
+        textInput.value = "";
+      })
+      .catch(error => {
+        alert("Error: " + error);
+      });
+  } else {
+    // Send image data
+    sendImage(fileInput, baseUrl + dynamicUrl);
+  }
 }
 /*
 function sendRequest() {
