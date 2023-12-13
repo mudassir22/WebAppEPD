@@ -222,7 +222,7 @@ function sendRequest() {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch JSON data
-  fetch("selection.json")
+  fetch("example.json")
     .then(response => response.json())
     .then(data => {
       const stateDropdown = document.getElementById("stateName");
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function populateZones(selectedState) {
-  fetch("selecion.json")
+  fetch("example.json")
     .then(response => response.json())
     .then(data => {
       const zoneDropdown = document.getElementById("zoneName");
@@ -276,7 +276,7 @@ function populateZones(selectedState) {
 }
 
 function populateNumbers(selectedZone) {
-  fetch("selection.json")
+  fetch("example.json")
     .then(response => response.json())
     .then(data => {
       const numberDropdown = document.getElementById("displayNumber");
