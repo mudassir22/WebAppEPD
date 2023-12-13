@@ -19,6 +19,8 @@ function toggleContent(option) {
 
   document.getElementById('contentContainer').style.display = 'block';
 }
+const imageButton = document.querySelector('.toggle-button:nth-child(2)');
+imageButton.classList.remove('active');
 
 
 function displayClearButton() {
