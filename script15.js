@@ -78,6 +78,34 @@ function sendRequest() {
     sendImage(fileInput, baseUrl + dynamicUrl);
   }
 }
+
+async function sendImage(fileInput, url) {
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            body: formData,
+            timeout: 300000, // Set timeout to 5 minutes (300,000 milliseconds)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const responseData = await response.text();
+        alert("Server response: " + responseData);
+        fileInput.value = null;
+        displayClearButton();
+    } catch (error) {
+        alert("Error: " + error.message);
+    }
+}
+
+
+
+
 /*
 function sendRequest() {
     // Get selected values from the form
