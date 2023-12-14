@@ -37,7 +37,9 @@ function sendRequest() {
   const state = document.getElementById("stateName").value;
   const zone = document.getElementById("zoneName").value;
   const displayNumber = document.getElementById("displayNumber").value;
-
+ 
+  const computedStyle = window.getComputedStyle(textContent);
+  
   // Check if required values are selected
   if (!state || !zone || !displayNumber) {
     alert("Please select State, Zone, and Display Number before sending data.");
@@ -48,7 +50,7 @@ function sendRequest() {
   const baseUrl = "https://d6bb-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
 
-  if (textContent.style.display === 'block') {
+  if (computedStyle.display === 'block') {
     // Send text data
     fetch(baseUrl + dynamicUrl, {
       method: 'POST',
