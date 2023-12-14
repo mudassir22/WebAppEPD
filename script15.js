@@ -31,7 +31,8 @@ function displayClearButton() {
 function sendRequest() {
   const textInput = document.getElementById("textInput");
   const fileInput = document.getElementById("fileInput");
-
+  const textContent = document.getElementById('textContent');
+  
   // Get selected values from the form
   const state = document.getElementById("stateName").value;
   const zone = document.getElementById("zoneName").value;
