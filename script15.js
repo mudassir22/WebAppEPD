@@ -47,7 +47,7 @@ function sendRequest() {
   const baseUrl = "https://d6bb-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
 
-  if (textContent.style.display = 'block') {
+  if (textContent.style.display === 'block') {
     // Send text data
     fetch(baseUrl + dynamicUrl, {
       method: 'POST',
