@@ -22,7 +22,7 @@ function toggleContent(option) {
 function displayClearButton() {
   const fileInput = document.getElementById('fileInput');
   const clearButton = document.querySelector('.clear-button');
-  const fileName = fileInput.value.split(/\\|\//).pop();
+  const fileName = fileInput.files[0] ? fileInput.files[0].name : null;
 
   clearButton.style.display = fileName ? 'block' : 'none';
 }
