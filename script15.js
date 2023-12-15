@@ -47,7 +47,7 @@ function sendRequest() {
   }
 
   // Update the URL dynamically
-  const baseUrl = "https://d6bb-122-160-48-182.ngrok-free.app";
+  const baseUrl = "https://a1ac-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
 
   if (computedStyle.display === 'block') {
