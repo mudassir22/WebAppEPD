@@ -47,7 +47,7 @@ function sendRequest() {
   }
 
   // Update the URL dynamically
-  const baseUrl = "https://9fe0-122-160-48-182.ngrok-free.app";
+  const baseUrl = "https://dbc2-122-160-48-182.ngrok-free.app";
   const dynamicUrl = `/${state}/POST/data-channel/${zone}/${displayNumber}`;
 
   if (computedStyle.display === 'block') {
